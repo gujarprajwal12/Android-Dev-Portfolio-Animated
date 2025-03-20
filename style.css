@@ -213,12 +213,14 @@ section {
     width: 100%;
 }
 
+
 .home-sci {
     position: absolute;
     bottom: 4rem;
-    width: 170px;
+    width: 220px; /* Increased width for better spacing */
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Align icons in the center */
+    gap: 15px; /* Add spacing between icons */
 }
 
 .home-sci a {
@@ -739,6 +741,7 @@ section:nth-child(odd) .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
+
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
@@ -1065,3 +1068,49 @@ section:nth-child(odd) .animate.scroll,
     }
 }
 
+
+.projects.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+}
+
+
+.vertical-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+    align-items: center;
+    margin-top: 20px; /* Adds space between form and buttons */
+}
+
+.vertical-buttons .btn {
+    width: 100%; /* Optional: Make buttons full width */
+    max-width: 300px; /* Restrict button width for better UI */
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    margin-top: 20px;
+}
+
+.contact-links a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}

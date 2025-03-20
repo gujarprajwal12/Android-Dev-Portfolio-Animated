@@ -55,3 +55,30 @@ function openMail() {
 function openPhone() {
     window.location.href = "tel:+917040452312";
 }
+
+
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    let mailtoLink = `mailto:gujarprajwal12@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+    window.location.href = mailtoLink;
+}
+
+function openDialer() {
+    window.location.href = "tel:+917040452312";
+}
+
+// Open WhatsApp with pre-filled message
+function openWhatsApp() {
+    let phoneNumber = "917040452312"; // WhatsApp format without "+"
+    let message = encodeURIComponent("Hello, I want to connect with you!");
+    let whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.location.href = whatsappURL;
+}
+
